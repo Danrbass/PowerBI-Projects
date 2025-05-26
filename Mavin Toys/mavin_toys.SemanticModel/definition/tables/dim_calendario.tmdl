@@ -1,0 +1,98 @@
+table dim_calendario
+	lineageTag: 7653ac00-a9c5-4869-a789-781e6c921cc8
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f304677e-5d36-4b57-bac0-ca0ff00c241e
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: d15a7a22-e591-420f-9512-ba95a90610f1
+			defaultHierarchy: LocalDateTable_29e5bc10-87a9-4d5a-9b90-92c76b7d860c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column year
+		dataType: double
+		lineageTag: 236b08bb-1e3b-436a-ac35-feb4ce1e6fdf
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column quarter
+		dataType: double
+		lineageTag: 91876197-fa37-463d-94ea-c12900302eee
+		summarizeBy: sum
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column qrtryear
+		dataType: string
+		lineageTag: 4e34044e-9362-448f-9e70-d43151a19a77
+		summarizeBy: none
+		sourceColumn: qrtryear
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: double
+		lineageTag: 6ec4be12-cae4-49ae-8631-2f56bfac2e8d
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column monthyear
+		dataType: string
+		lineageTag: e5324705-9b52-43b5-a783-3cab97bb5f49
+		summarizeBy: none
+		sourceColumn: monthyear
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: double
+		lineageTag: db80f42e-e739-4ef9-9d7c-ff2bf50a836a
+		summarizeBy: sum
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yearmonth
+		dataType: int64
+		formatString: 0
+		lineageTag: b981502d-b9fd-4522-b1d8-3b8e72893dc4
+		summarizeBy: sum
+		sourceColumn: yearmonth
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_calendario = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
+				    Toys_Mavin_dim_calendario = Fonte{[Schema="Toys_Mavin",Item="dim_calendario"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_dim_calendario,{{"yearmonth", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

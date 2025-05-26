@@ -1,0 +1,65 @@
+table dim_stores
+	lineageTag: 11f6ccc7-1cc7-4f41-a9f9-08af1843b4ac
+
+	column store_id
+		dataType: string
+		lineageTag: 16def62a-c98e-48ae-93c5-794db645c845
+		summarizeBy: none
+		sourceColumn: store_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column store_name
+		dataType: string
+		lineageTag: 8a6b683a-f2d2-4f58-ace9-8d6cd57725ab
+		summarizeBy: none
+		sourceColumn: store_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column store_city
+		dataType: string
+		lineageTag: 3cda40a1-ae6c-461d-b007-0ceb3a855bfd
+		summarizeBy: none
+		sourceColumn: store_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column store_location
+		dataType: string
+		lineageTag: 8996b1e8-0311-4c28-9ecd-192db0e3a2b8
+		summarizeBy: none
+		sourceColumn: store_location
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_opened
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0fde23ca-0757-4233-9e5e-60d23f015389
+		summarizeBy: none
+		sourceColumn: data_opened
+
+		variation Variation
+			isDefault
+			relationship: 684b7a38-99b4-4d69-a001-52ccb5c140bf
+			defaultHierarchy: LocalDateTable_b2e548d5-927e-495c-8283-3f6e1ace2fa2.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition dim_stores = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
+				    Toys_Mavin_dim_stores = Fonte{[Schema="Toys_Mavin",Item="dim_stores"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_dim_stores,{{"store_id", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

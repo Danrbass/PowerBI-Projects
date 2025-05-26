@@ -1,0 +1,26 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["dim_products","dim_calendario","dim_stores","fact_sales_info"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.143.878.0 (25.05)+b20aa3b866ec1b70879135a4e60e4b1301c75b21
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_products
+ref table dim_calendario
+ref table DateTableTemplate_db108986-cc0e-40ee-83d1-421419964ef4
+ref table LocalDateTable_29e5bc10-87a9-4d5a-9b90-92c76b7d860c
+ref table dim_stores
+ref table LocalDateTable_b2e548d5-927e-495c-8283-3f6e1ace2fa2
+ref table fact_sales_info
+
+ref cultureInfo pt-BR
+

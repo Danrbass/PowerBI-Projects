@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "mavin_toys"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c28115a6-6240-40cc-8f2c-1f0a0225b34d"
+  }
+}

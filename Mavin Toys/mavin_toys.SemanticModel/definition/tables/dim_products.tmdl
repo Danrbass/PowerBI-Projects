@@ -1,0 +1,61 @@
+table dim_products
+	lineageTag: 0bad4d99-cf97-4cf8-b076-fc454556a3a7
+
+	column product_id
+		dataType: string
+		lineageTag: 7a15f058-f7f0-46a9-8e95-7d70e472eee9
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_name
+		dataType: string
+		lineageTag: 9b67790e-13e3-4dec-9d73-9e9ae305fa21
+		summarizeBy: none
+		sourceColumn: product_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_category
+		dataType: string
+		lineageTag: 074bf5de-0291-4adb-b4d0-b6f27e9cfd3c
+		summarizeBy: none
+		sourceColumn: product_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_cost
+		dataType: double
+		lineageTag: 47f4f53f-93ba-4ca5-ae0f-6a5649f7854c
+		summarizeBy: none
+		sourceColumn: product_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_price
+		dataType: double
+		lineageTag: 82fb8326-c52f-4e2c-81d3-6da2a570c7e2
+		summarizeBy: none
+		sourceColumn: product_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition dim_products = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
+				    Toys_Mavin_dim_products = Fonte{[Schema="Toys_Mavin",Item="dim_products"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_dim_products,{{"product_id", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

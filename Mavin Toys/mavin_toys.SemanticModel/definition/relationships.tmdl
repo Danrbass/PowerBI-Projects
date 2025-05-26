@@ -1,0 +1,22 @@
+relationship d15a7a22-e591-420f-9512-ba95a90610f1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_calendario.date
+	toColumn: LocalDateTable_29e5bc10-87a9-4d5a-9b90-92c76b7d860c.Date
+
+relationship 684b7a38-99b4-4d69-a001-52ccb5c140bf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_stores.data_opened
+	toColumn: LocalDateTable_b2e548d5-927e-495c-8283-3f6e1ace2fa2.Date
+
+relationship AutoDetected_1ac54365-64ec-4ad7-98ea-59831bb56225
+	fromColumn: fact_sales_info.product_id
+	toColumn: dim_products.product_id
+
+relationship AutoDetected_e91314c9-273a-4acf-873f-f58ab4428f78
+	fromColumn: fact_sales_info.store_id
+	toColumn: dim_stores.store_id
+
+relationship c0f8327d-b5e8-1b12-e963-3bce9ba03149
+	fromColumn: fact_sales_info.date
+	toColumn: dim_calendario.date
+

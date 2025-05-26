@@ -1,0 +1,90 @@
+table fact_sales_info
+	lineageTag: 66eb9a9e-984a-4916-895f-6421527925b9
+
+	column date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6e6a8e24-8dff-442d-9866-5a6cbf16bccd
+		summarizeBy: none
+		sourceColumn: date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column sale_id
+		dataType: string
+		lineageTag: 1aa43d0e-b3f5-4359-9f86-1cd54d708844
+		summarizeBy: none
+		sourceColumn: sale_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column store_id
+		dataType: string
+		lineageTag: e8fb4984-c653-4b41-b3e6-07948c6b6402
+		summarizeBy: none
+		sourceColumn: store_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: 22028088-8294-4bb3-9779-389a62e4e883
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column units
+		dataType: int64
+		formatString: 0
+		lineageTag: ce8008f8-01c3-4207-b021-6b1ea58c2a58
+		summarizeBy: sum
+		sourceColumn: units
+
+		annotation SummarizationSetBy = Automatic
+
+	column fullstock
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b96dd56-f173-4f24-abcf-dfd6337f9ac3
+		summarizeBy: sum
+		sourceColumn: fullstock
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_price
+		dataType: double
+		lineageTag: 1cc5c46f-5d61-4635-810b-b2dc5608cc5b
+		summarizeBy: sum
+		sourceColumn: product_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column product_cost
+		dataType: double
+		lineageTag: f36e11fe-e0e3-4abf-9016-5fb9a392f751
+		summarizeBy: sum
+		sourceColumn: product_cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_sales_info = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
+				    Toys_Mavin_fact_sales_info = Fonte{[Schema="Toys_Mavin",Item="fact_sales_info"]}[Data],
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_fact_sales_info,{{"sale_id", type text}, {"store_id", type text}, {"product_id", type text}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
