@@ -1,0 +1,44 @@
+table Calculus
+	lineageTag: 180c4651-a137-4b6d-8858-baad87ff6ff3
+
+	measure _
+		lineageTag: 515cb867-8ae3-4e96-b1ca-1c24bae24c15
+
+	measure 'Product Price' = ```
+			
+			    SUM(fact_sales_info[product_price])
+			```
+		lineageTag: a2f2cf88-6b98-4c58-a4c4-cae2143e427c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Product Cost' = ```
+			
+			    SUM(fact_sales_info[product_cost])
+			```
+		lineageTag: 04e562bb-7c94-4bf6-9c49-77317e62681a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Units = ```
+			
+			    SUM(fact_sales_info[units])
+			```
+		formatString: 0
+		lineageTag: 89d3e9f2-af93-44a3-aa02-716891461b67
+
+	measure __
+		lineageTag: 86a07d0c-93c8-4a43-ba64-e3405dbf47d2
+
+	partition Calculus = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

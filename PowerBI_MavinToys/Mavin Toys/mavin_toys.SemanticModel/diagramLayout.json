@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 8,
+        "x": 217.38305001469371,
         "y": 0
       },
       "nodes": [
@@ -52,6 +52,19 @@
           "nodeIndex": "fact_sales_info",
           "size": {
             "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 902.38305001469359,
+            "y": 346.9223489799233
+          },
+          "nodeIndex": "Calculus",
+          "nodeLineageTag": "180c4651-a137-4b6d-8858-baad87ff6ff3",
+          "size": {
+            "height": 104,
             "width": 234
           },
           "zIndex": 0

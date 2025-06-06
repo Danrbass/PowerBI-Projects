@@ -13,6 +13,8 @@ table dim_calendario
 			relationship: d15a7a22-e591-420f-9512-ba95a90610f1
 			defaultHierarchy: LocalDateTable_29e5bc10-87a9-4d5a-9b90-92c76b7d860c.'Hierarquia de datas'
 
+		changedProperty = SortByColumn
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -79,6 +81,8 @@ table dim_calendario
 		lineageTag: b981502d-b9fd-4522-b1d8-3b8e72893dc4
 		summarizeBy: sum
 		sourceColumn: yearmonth
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
