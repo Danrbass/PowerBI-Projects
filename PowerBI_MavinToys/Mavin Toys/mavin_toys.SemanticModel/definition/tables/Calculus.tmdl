@@ -1,34 +1,152 @@
 table Calculus
 	lineageTag: 180c4651-a137-4b6d-8858-baad87ff6ff3
 
-	measure _
+	measure 'Total Sales' = ```
+			
+			    
+			    DISTINCTCOUNT('fact_sales_info'[sale_id])
+			```
+		formatString: #,0
 		lineageTag: 515cb867-8ae3-4e96-b1ca-1c24bae24c15
 
-	measure 'Product Price' = ```
+	measure Revenue = ```
 			
-			    SUM(fact_sales_info[product_price])
+			    SUM(fact_sales_info[Revenue])
 			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: a2f2cf88-6b98-4c58-a4c4-cae2143e427c
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Product Cost' = ```
+	measure 'Cost of Goods Sold' = ```
 			
-			    SUM(fact_sales_info[product_cost])
+			    SUM(fact_sales_info[Cogs])
 			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: 04e562bb-7c94-4bf6-9c49-77317e62681a
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure Units = ```
 			
 			    SUM(fact_sales_info[units])
 			```
-		formatString: 0
+		formatString: #,0
 		lineageTag: 89d3e9f2-af93-44a3-aa02-716891461b67
 
-	measure __
+	measure 'Stock Quantity Hands on Free' = ```
+			
+			
+			var __maxValues_ByProduct = 
+			    MAXX( -- Return the max values by product
+			        VALUES('fact_sales_info'[date]), 
+			        CALCULATE(
+			            MAX('fact_sales_info'[fullstock])
+			        )
+			    )
+			
+			var __sumValues_ByCategory = 
+			    SUMX( -- Sum all max value products by category
+			        VALUES(dim_products[product_name]),
+			        MAXX(
+			            VALUES('fact_sales_info'[date]), 
+			            CALCULATE(
+			                MAX('fact_sales_info'[fullstock])
+			            )
+			        )
+			    )
+			
+			var __sumValues_ByStore = 
+			    SUMX(
+			        VALUES(dim_products[product_category]),
+			        SUMX( -- Sum all max value products by store 
+			            VALUES(dim_products[product_name]),
+			            MAXX(
+			                VALUES('fact_sales_info'[date]), 
+			                CALCULATE(
+			                    MAX('fact_sales_info'[fullstock])
+			                )
+			            )
+			        )
+			    )
+			
+			
+			
+			var __sumValues_All =  
+			    SUMX( -- Sum all stock quantity in store
+			        VALUES(dim_stores[store_name]),
+			        SUMX( 
+			            VALUES(dim_products[product_category]), 
+			            SUMX(
+			                VALUES(dim_products[product_name]), 
+			                MAXX(
+			                    VALUES('fact_sales_info'[date]), 
+			                    CALCULATE(
+			                        MAX('fact_sales_info'[fullstock])
+			                    )
+			                )
+			            )
+			        )
+			    )
+			
+			    RETURN
+			
+			        SWITCH(
+			            TRUE(), 
+			            ISINSCOPE(dim_products[product_name]), __maxValues_ByProduct, 
+			            ISINSCOPE(dim_products[product_category]), __sumValues_ByCategory, 
+			            ISINSCOPE(dim_stores[store_name]), __sumValues_ByStore, 
+			            __sumValues_All
+			        )
+			```
+		formatString: #,0
 		lineageTag: 86a07d0c-93c8-4a43-ba64-e3405dbf47d2
+
+	measure 'Store without stock on hand' = ```
+			
+			    CALCULATE(
+			        [Total Sales], 
+			        FILTER(
+			            'fact_sales_info', 
+			            ISBLANK('fact_sales_info'[fullstock])
+			        )
+			    )
+			```
+		formatString: #,0
+		lineageTag: 97969741-54d2-4472-a638-6ab1652ad40a
+
+	measure 'Gross Profit' = [Revenue] - [Cost of Goods Sold]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 89025473-fe66-4279-aa2c-65ae2642bf5f
+
+	measure 'Gross Profit Margin' = ```
+			
+			    DIVIDE(
+			        [Gross Profit], 
+			        [Revenue]
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 3baa3570-eb52-4069-8059-33f1351f7582
+
+	measure Mark-up = ```
+			
+			    DIVIDE(
+			        [Gross Profit], 
+			        [Cost of Goods Sold]
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9459e1c2-7d53-4870-86bc-e3e1a7f9be21
+
+	measure 'Average unit cost' = ```
+			
+			    DIVIDE([Cost of Goods Sold], [Units])
+			```
+		lineageTag: 37d52e41-963c-4501-914a-faf09579152a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Inventory Cost' = [Average unit cost] * [Stock Quantity Hands on Free]
+		lineageTag: 453841d3-9482-4d37-8a2c-13abe8510eab
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition Calculus = m
 		mode: import

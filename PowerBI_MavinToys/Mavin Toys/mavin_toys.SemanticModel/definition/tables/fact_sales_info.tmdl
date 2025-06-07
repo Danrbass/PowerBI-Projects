@@ -74,6 +74,26 @@ table fact_sales_info
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column revenue
+		dataType: double
+		lineageTag: 0f3dc5f2-9c68-4abb-aca2-a386fb7540e5
+		summarizeBy: sum
+		sourceColumn: revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cogs
+		dataType: double
+		lineageTag: d028ef55-8988-4553-b73d-47006ebcbdbf
+		summarizeBy: sum
+		sourceColumn: cogs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition fact_sales_info = m
 		mode: import
 		source =

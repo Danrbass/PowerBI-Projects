@@ -20,41 +20,162 @@
   "sections": [
     {
       "config": "{}",
-      "displayName": "Página 1",
+      "displayName": "Overview",
       "displayOption": 1,
       "filters": "[]",
       "height": 1080.00,
       "name": "0400e5f2b69cd4e0e281",
       "visualContainers": [
         {
-          "config": "{\"name\":\"11a5b493d6be3ed39955\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1444,\"y\":0,\"z\":2,\"width\":300,\"height\":300,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Units\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Units\"},\"Name\":\"Calculus.Units\",\"NativeReferenceName\":\"Units\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "config": "{\"name\":\"0705a589b338932b928c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":622.3480595557726,\"y\":167.45911642665365,\"z\":6007,\"width\":259.93653893092505,\"height\":149.96338784476447,\"tabOrder\":6007}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Average unit cost\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Average unit cost\"},\"Name\":\"Calculus.Average unit cost\",\"NativeReferenceName\":\"Average unit cost\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 300.00,
-          "width": 300.00,
-          "x": 1444.00,
-          "y": 0.00,
-          "z": 2.00
+          "height": 149.96,
+          "width": 259.94,
+          "x": 622.35,
+          "y": 167.46,
+          "z": 6007.00
         },
         {
-          "config": "{\"name\":\"1800d745789481597051\",\"layouts\":[{\"id\":0,\"position\":{\"x\":980,\"y\":0,\"z\":1,\"width\":344,\"height\":300,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Product Price\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Product Price\"},\"Name\":\"Calculus.Product Price\",\"NativeReferenceName\":\"Product Price\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}}}",
+          "config": "{\"name\":\"0ed4c00358fe285ac5f8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":462.3871125213571,\"y\":0,\"z\":6005,\"width\":497.37856968513546,\"height\":167.45911642665365,\"tabOrder\":6005}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Gross Profit Margin\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Gross Profit Margin\"},\"Name\":\"Calculus.Gross Profit Margin\",\"NativeReferenceName\":\"Gross Profit Margin\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 300.00,
-          "width": 344.00,
-          "x": 980.00,
+          "height": 167.46,
+          "width": 497.38,
+          "x": 462.39,
           "y": 0.00,
-          "z": 1.00
+          "z": 6005.00
         },
         {
-          "config": "{\"name\":\"becb4cca7d53ed95a9e5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":610,\"y\":0,\"z\":0,\"width\":334,\"height\":280,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Product Cost\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Product Cost\"},\"Name\":\"Calculus.Product Cost\",\"NativeReferenceName\":\"Product Cost\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}]}}}",
+          "config": "{\"name\":\"0fe8c4c7306c9e6d4f09\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1297.1833048572125,\"y\":167.45911642665365,\"z\":6006,\"width\":212.448132780083,\"height\":167.45911642665365,\"tabOrder\":6006}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Mark-up\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Mark-up\"},\"Name\":\"Calculus.Mark-up\",\"NativeReferenceName\":\"Mark-up\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 280.00,
-          "width": 334.00,
-          "x": 610.00,
+          "height": 167.46,
+          "width": 212.45,
+          "x": 1297.18,
+          "y": 167.46,
+          "z": 6006.00
+        },
+        {
+          "config": "{\"name\":\"11a5b493d6be3ed39955\",\"layouts\":[{\"id\":0,\"position\":{\"x\":917.5963367382881,\"y\":0,\"z\":2000,\"width\":300.81578020429725,\"height\":149.32581895033462,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Units\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Units\"},\"Name\":\"Calculus.Units\",\"NativeReferenceName\":\"Units\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.33,
+          "width": 300.82,
+          "x": 917.60,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"1800d745789481597051\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":149.96338784476447,\"z\":1000,\"width\":409.89992677568955,\"height\":149.96338784476447,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Product Price\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Revenue\"},\"Name\":\"Calculus.Product Price\",\"NativeReferenceName\":\"Revenue\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.96,
+          "width": 409.90,
+          "x": 0.00,
+          "y": 149.96,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"34fd212df2ef57ab5f82\",\"layouts\":[{\"id\":0,\"position\":{\"x\":917.276055650476,\"y\":259.93653893092505,\"z\":6008,\"width\":299.92677568952894,\"height\":149.96338784476447,\"tabOrder\":6008}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Inventory Cost\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Inventory Cost\"},\"Name\":\"Calculus.Inventory Cost\",\"NativeReferenceName\":\"Inventory Cost\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 149.96,
+          "width": 299.93,
+          "x": 917.28,
+          "y": 259.94,
+          "z": 6008.00
+        },
+        {
+          "config": "{\"name\":\"4fda3dedd9d0505c68eb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1510.5713279323704,\"y\":151.48996125396266,\"z\":6003,\"width\":409.0228953856992,\"height\":151.48996125396266,\"tabOrder\":6003}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Store without stock on hand\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Store without stock on hand\"},\"Name\":\"Calculus.Store without stock on hand\",\"NativeReferenceName\":\"Store without stock on hand\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 151.49,
+          "width": 409.02,
+          "x": 1510.57,
+          "y": 151.49,
+          "z": 6003.00
+        },
+        {
+          "config": "{\"name\":\"b3549a418aba8545721a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":29.992677568952892,\"y\":557.3639248230413,\"z\":3000,\"width\":1432.1503539175008,\"height\":522.3724676592628,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"pivotTable\",\"projections\":{\"Rows\":[{\"queryRef\":\"dim_stores.store_name\",\"active\":true},{\"queryRef\":\"dim_products.product_category\",\"active\":true},{\"queryRef\":\"dim_products.product_name\",\"active\":true}],\"Values\":[{\"queryRef\":\"Calculus.Revenue\"},{\"queryRef\":\"Calculus.Cost of Goods Sold\"},{\"queryRef\":\"Calculus.Gross Profit\"},{\"queryRef\":\"Calculus.Gross Profit Margin\"},{\"queryRef\":\"Calculus.Mark-up\"},{\"queryRef\":\"Calculus.Average unit cost\"},{\"queryRef\":\"Calculus.Inventory Cost\"},{\"queryRef\":\"CountNonNull(dim_products.product_price)\"},{\"queryRef\":\"CountNonNull(dim_products.product_cost)\"},{\"queryRef\":\"Calculus.Stock Quantity Hands on Free\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_stores\",\"Type\":0},{\"Name\":\"d1\",\"Entity\":\"dim_products\",\"Type\":0},{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"store_name\"},\"Name\":\"dim_stores.store_name\",\"NativeReferenceName\":\"store_name\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"product_name\"},\"Name\":\"dim_products.product_name\",\"NativeReferenceName\":\"product_name\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Revenue\"},\"Name\":\"Calculus.Revenue\",\"NativeReferenceName\":\"Revenue\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cost of Goods Sold\"},\"Name\":\"Calculus.Cost of Goods Sold\",\"NativeReferenceName\":\"Cost of Goods Sold\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Gross Profit\"},\"Name\":\"Calculus.Gross Profit\",\"NativeReferenceName\":\"Gross Profit\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Gross Profit Margin\"},\"Name\":\"Calculus.Gross Profit Margin\",\"NativeReferenceName\":\"Gross Profit Margin\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Mark-up\"},\"Name\":\"Calculus.Mark-up\",\"NativeReferenceName\":\"Mark-up\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Average unit cost\"},\"Name\":\"Calculus.Average unit cost\",\"NativeReferenceName\":\"Average unit cost\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Inventory Cost\"},\"Name\":\"Calculus.Inventory Cost\",\"NativeReferenceName\":\"Inventory Cost\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"product_price\"}},\"Function\":4},\"Name\":\"CountNonNull(dim_products.product_price)\",\"NativeReferenceName\":\"Product Price\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"product_cost\"}},\"Function\":4},\"Name\":\"CountNonNull(dim_products.product_cost)\",\"NativeReferenceName\":\"Product Cost\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d1\"}},\"Property\":\"product_category\"},\"Name\":\"dim_products.product_category\",\"NativeReferenceName\":\"product_category\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Stock Quantity Hands on Free\"},\"Name\":\"Calculus.Stock Quantity Hands on Free\",\"NativeReferenceName\":\"Stock Hands on Free\"}]},\"expansionStates\":[{\"roles\":[\"Rows\"],\"levels\":[{\"queryRefs\":[\"dim_stores.store_name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_stores\"}},\"Property\":\"store_name\"}}],\"isPinned\":true},{\"queryRefs\":[\"dim_products.product_category\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_products\"}},\"Property\":\"product_category\"}}],\"isPinned\":true},{\"queryRefs\":[\"dim_products.product_name\"],\"isCollapsed\":true,\"identityKeys\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"dim_products\"}},\"Property\":\"product_name\"}}],\"isPinned\":true}],\"root\":{\"identityValues\":null,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Maven Toys Aguascalientes 1'\"}}],\"isToggled\":true,\"children\":[{\"identityValues\":[{\"Literal\":{\"Value\":\"'Art & Crafts'\"}}],\"isToggled\":true}]}]}}],\"columnProperties\":{\"CountNonNull(dim_products.product_price)\":{\"displayName\":\"Product Price\"},\"CountNonNull(dim_products.product_cost)\":{\"displayName\":\"Product Cost\"},\"Calculus.Stock Quantity Hands on Free\":{\"displayName\":\"Stock Hands on Free\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 522.37,
+          "width": 1432.15,
+          "x": 29.99,
+          "y": 557.36,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b3a87292f122ffc61aab\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":304.9255552843544,\"z\":6004,\"width\":409.89992677568955,\"height\":167.45911642665365,\"tabOrder\":6004}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Gross Profit\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Gross Profit\"},\"Name\":\"Calculus.Gross Profit\",\"NativeReferenceName\":\"Gross Profit\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 167.46,
+          "width": 409.90,
+          "x": 0.00,
+          "y": 304.93,
+          "z": 6004.00
+        },
+        {
+          "config": "{\"name\":\"b47abd8315481a55aa3b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1587.1125213570906,\"y\":557.3639248230413,\"z\":6000,\"width\":332.41884305589457,\"height\":472.3846717110081,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_products.product_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_products\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"product_name\"},\"Name\":\"dim_products.product_name\",\"NativeReferenceName\":\"product_name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 472.38,
+          "width": 332.42,
+          "x": 1587.11,
+          "y": 557.36,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"bdf771eebabad4f2cd45\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1263.8591053187743,\"y\":0,\"z\":4000,\"width\":333.2779147587178,\"height\":149.32581895033462,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Stock Quantity\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Stock Quantity Hands on Free\"},\"Name\":\"Calculus.Stock Quantity\",\"NativeReferenceName\":\"Stock Quantity Hands on Free\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.33,
+          "width": 333.28,
+          "x": 1263.86,
+          "y": 0.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"becb4cca7d53ed95a9e5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":404.6946107784431,\"height\":149.32581895033462,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Product Cost\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Cost of Goods Sold\"},\"Name\":\"Calculus.Product Cost\",\"NativeReferenceName\":\"Cost of Goods Sold\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1000D\"}}},\"labelPrecision\":{\"expr\":{\"Literal\":{\"Value\":\"3L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 149.33,
+          "width": 404.69,
+          "x": 0.00,
           "y": 0.00,
           "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d49ce818acbdfdbe2343\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1574.615572370027,\"y\":334.9182328533073,\"z\":5000,\"width\":344.9157920429583,\"height\":322.4212838662436,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"dim_stores.store_name\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dim_stores\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"store_name\"},\"Name\":\"dim_stores.store_name\",\"NativeReferenceName\":\"store_name\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Basic'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "filters": "[]",
+          "height": 322.42,
+          "width": 344.92,
+          "x": 1574.62,
+          "y": 334.92,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"da4d431459e7dac26029\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1510.5713279323704,\"y\":0,\"z\":6002,\"width\":409.0228953856992,\"height\":151.48996125396266,\"tabOrder\":6002}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Calculus.Store Without Stock\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Calculus\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Total Sales\"},\"Name\":\"Calculus.Store Without Stock\",\"NativeReferenceName\":\"Total Sales\"}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 151.49,
+          "width": 409.02,
+          "x": 1510.57,
+          "y": 0.00,
+          "z": 6002.00
         }
       ],
       "width": 1920.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Storage",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "c2acdb0434584dd50cc1",
+      "ordinal": 2,
+      "visualContainers": [],
+      "width": 1280.00
+    },
+    {
+      "config": "{}",
+      "displayName": "Financial",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f0b9d33f49777b4fd7a1",
+      "ordinal": 1,
+      "visualContainers": [],
+      "width": 1280.00
     }
   ]
 }
