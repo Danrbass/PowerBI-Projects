@@ -1,0 +1,53 @@
+table pFinancials_Metrics
+	lineageTag: 4fbfc4b1-8f18-4f91-ab21-a92f037bfe13
+
+	column pFinancials_Metrics
+		lineageTag: 237fd4cd-00f3-42dc-ba70-ced346a659c6
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'pFinancials_Metrics Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'pFinancials_Metrics Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pFinancials_Metrics Campos'
+		isHidden
+		lineageTag: 487ebe4f-28db-47ef-a8d3-5188f584adc7
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'pFinancials_Metrics Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pFinancials_Metrics Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 2947a6c1-52d6-4556-9d49-539de3056ffb
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pFinancials_Metrics = calculated
+		mode: import
+		source =
+				{
+				    ("Revenue", NAMEOF('Calculus'[Revenue]), 0),
+				    ("Cost of Goods Sold", NAMEOF('Calculus'[Cost of Goods Sold]), 1),
+				    ("Gross Profit", NAMEOF('Calculus'[Gross Profit]), 2),
+				    ("Total Sales", NAMEOF('Calculus'[Total Sales]), 3),
+				    ("Average ticket", NAMEOF('Calculus'[Average ticket]), 4),
+				    ("Gross Profit Margin", NAMEOF('Calculus'[Gross Profit Margin]), 5),
+				    ("Mark-up", NAMEOF('Calculus'[Mark-up]), 6)
+				}
+
+	annotation PBI_Id = a40ea77bf617477a8ec85f3667474140
+

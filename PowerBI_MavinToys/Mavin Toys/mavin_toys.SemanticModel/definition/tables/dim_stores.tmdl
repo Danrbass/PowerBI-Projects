@@ -47,15 +47,13 @@ table dim_stores
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	partition dim_stores = m
 		mode: import
 		source =
 				let
-				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
-				    Toys_Mavin_dim_stores = Fonte{[Schema="Toys_Mavin",Item="dim_stores"]}[Data],
-				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_dim_stores,{{"store_id", type text}})
+				    QUERY = " SELECT * FROM " & SchemaName_Postgres & "." & "dim_stores",
+				    Fonte = Value.NativeQuery(PostgreSQL.Database("localhost", "dbt_sources"), QUERY, null, [EnableFolding=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"store_id", type text}})
 				in
 				    #"Tipo Alterado"
 

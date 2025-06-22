@@ -7,6 +7,7 @@ table dim_calendario
 		lineageTag: f304677e-5d36-4b57-bac0-ca0ff00c241e
 		summarizeBy: none
 		sourceColumn: date
+		sortByColumn: yearmonth
 
 		variation Variation
 			isDefault
@@ -17,10 +18,8 @@ table dim_calendario
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column year
-		dataType: double
+		dataType: int64
 		lineageTag: 236b08bb-1e3b-436a-ac35-feb4ce1e6fdf
 		summarizeBy: sum
 		sourceColumn: year
@@ -62,6 +61,9 @@ table dim_calendario
 		lineageTag: e5324705-9b52-43b5-a783-3cab97bb5f49
 		summarizeBy: none
 		sourceColumn: monthyear
+		sortByColumn: yearmonth
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -76,10 +78,9 @@ table dim_calendario
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column yearmonth
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: b981502d-b9fd-4522-b1d8-3b8e72893dc4
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: yearmonth
 
 		changedProperty = SortByColumn
@@ -90,9 +91,9 @@ table dim_calendario
 		mode: import
 		source =
 				let
-				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
-				    Toys_Mavin_dim_calendario = Fonte{[Schema="Toys_Mavin",Item="dim_calendario"]}[Data],
-				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_dim_calendario,{{"yearmonth", Int64.Type}})
+				    QUERY = " SELECT * FROM " & SchemaName_Postgres & "." & "dim_calendario",
+				    Fonte = Value.NativeQuery(PostgreSQL.Database("localhost", "dbt_sources"), QUERY, null, [EnableFolding=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"yearmonth", type text}, {"year", Int64.Type}})
 				in
 				    #"Tipo Alterado"
 

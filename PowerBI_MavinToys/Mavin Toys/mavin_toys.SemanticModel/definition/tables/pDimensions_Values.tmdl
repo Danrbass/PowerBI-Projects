@@ -1,0 +1,50 @@
+table pDimensions_Values
+	lineageTag: 92500720-68a7-4ae4-9345-876f4381cd18
+
+	column pDimensions_Values
+		lineageTag: 9902b7be-fbab-4cd0-97c0-8a004046689f
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'pDimensions_Values Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'pDimensions_Values Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pDimensions_Values Campos'
+		isHidden
+		lineageTag: 62c9e739-33fb-43fd-a38d-08e4df6cf471
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'pDimensions_Values Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pDimensions_Values Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 779b2f4a-8171-4938-a501-7524f12a80db
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pDimensions_Values = calculated
+		mode: import
+		source =
+				{
+				    ("Store", NAMEOF('dim_stores'[store_name]), 0),
+				    ("Category", NAMEOF('dim_products'[product_category]), 1),
+				    ("Product", NAMEOF('dim_products'[product_name]), 2),
+				    ("Location Store", NAMEOF('dim_stores'[store_location]), 3)
+				}
+
+	annotation PBI_Id = 6d62363392a54acdb377c5d86bf5d320
+

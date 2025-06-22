@@ -7,6 +7,7 @@ table Calculus
 			    DISTINCTCOUNT('fact_sales_info'[sale_id])
 			```
 		formatString: #,0
+		displayFolder: Metrics\Financials
 		lineageTag: 515cb867-8ae3-4e96-b1ca-1c24bae24c15
 
 	measure Revenue = ```
@@ -14,6 +15,7 @@ table Calculus
 			    SUM(fact_sales_info[Revenue])
 			```
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Metrics\Financials
 		lineageTag: a2f2cf88-6b98-4c58-a4c4-cae2143e427c
 
 	measure 'Cost of Goods Sold' = ```
@@ -21,6 +23,7 @@ table Calculus
 			    SUM(fact_sales_info[Cogs])
 			```
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Metrics\Financials
 		lineageTag: 04e562bb-7c94-4bf6-9c49-77317e62681a
 
 	measure Units = ```
@@ -28,91 +31,96 @@ table Calculus
 			    SUM(fact_sales_info[units])
 			```
 		formatString: #,0
+		displayFolder: Metrics\Storage
 		lineageTag: 89d3e9f2-af93-44a3-aa02-716891461b67
 
 	measure 'Stock Quantity Hands on Free' = ```
 			
 			
-			var __maxValues_ByProduct = 
-			    MAXX( -- Return the max values by product
-			        VALUES('fact_sales_info'[date]), 
-			        CALCULATE(
-			            MAX('fact_sales_info'[fullstock])
-			        )
-			    )
-			
-			var __sumValues_ByCategory = 
-			    SUMX( -- Sum all max value products by category
-			        VALUES(dim_products[product_name]),
-			        MAXX(
-			            VALUES('fact_sales_info'[date]), 
-			            CALCULATE(
-			                MAX('fact_sales_info'[fullstock])
-			            )
-			        )
-			    )
-			
-			var __sumValues_ByStore = 
-			    SUMX(
-			        VALUES(dim_products[product_category]),
-			        SUMX( -- Sum all max value products by store 
-			            VALUES(dim_products[product_name]),
-			            MAXX(
-			                VALUES('fact_sales_info'[date]), 
-			                CALCULATE(
-			                    MAX('fact_sales_info'[fullstock])
-			                )
-			            )
-			        )
-			    )
 			
 			
+			sum(fact_sales_info[stock_partitioned])
 			
-			var __sumValues_All =  
-			    SUMX( -- Sum all stock quantity in store
-			        VALUES(dim_stores[store_name]),
-			        SUMX( 
-			            VALUES(dim_products[product_category]), 
-			            SUMX(
-			                VALUES(dim_products[product_name]), 
-			                MAXX(
-			                    VALUES('fact_sales_info'[date]), 
-			                    CALCULATE(
-			                        MAX('fact_sales_info'[fullstock])
-			                    )
-			                )
-			            )
-			        )
-			    )
+			// var __maxValues_ByProduct = 
+			//     MAXX( -- Return the max values by product
+			//         VALUES('fact_sales_info'[date]), 
+			//         CALCULATE(
+			//             MAX('fact_sales_info'[fullstock])
+			//         )
+			//     )
 			
-			    RETURN
+			// var __sumValues_ByCategory = 
+			//     SUMX( -- Sum all max value products by category
+			//         VALUES(dim_products[product_name]),
+			//         MAXX(
+			//             VALUES('fact_sales_info'[date]), 
+			//             CALCULATE(
+			//                 MAX('fact_sales_info'[fullstock])
+			//             )
+			//         )
+			//     )
 			
-			        SWITCH(
-			            TRUE(), 
-			            ISINSCOPE(dim_products[product_name]), __maxValues_ByProduct, 
-			            ISINSCOPE(dim_products[product_category]), __sumValues_ByCategory, 
-			            ISINSCOPE(dim_stores[store_name]), __sumValues_ByStore, 
-			            __sumValues_All
-			        )
+			// var __sumValues_ByStore = 
+			//     SUMX(
+			//         VALUES(dim_products[product_category]),
+			//         SUMX( -- Sum all max value products by store 
+			//             VALUES(dim_products[product_name]),
+			//             MAXX(
+			//                 VALUES('fact_sales_info'[date]), 
+			//                 CALCULATE(
+			//                     MAX('fact_sales_info'[fullstock])
+			//                 )
+			//             )
+			//         )
+			//     )
+			
+			
+			
+			// var __sumValues_All =  
+			//     SUMX( -- Sum all stock quantity in store
+			//         VALUES(dim_stores[store_name]),
+			//         SUMX( 
+			//             VALUES(dim_products[product_category]), 
+			//             SUMX(
+			//                 VALUES(dim_products[product_name]), 
+			//                 MAXX(
+			//                     VALUES('fact_sales_info'[date]), 
+			//                     CALCULATE(
+			//                         MAX('fact_sales_info'[fullstock])
+			//                     )
+			//                 )
+			//             )
+			//         )
+			//     )
+			
+			//     RETURN
+			
+			//         SWITCH(
+			//             TRUE(), 
+			//             ISINSCOPE(dim_products[product_name]), __maxValues_ByProduct, 
+			//             ISINSCOPE(dim_products[product_category]), __sumValues_ByCategory, 
+			//             ISINSCOPE(dim_stores[store_name]), __sumValues_ByStore, 
+			//             __sumValues_All
+			//         )
 			```
 		formatString: #,0
+		displayFolder: Metrics\Storage
 		lineageTag: 86a07d0c-93c8-4a43-ba64-e3405dbf47d2
 
 	measure 'Store without stock on hand' = ```
 			
 			    CALCULATE(
 			        [Total Sales], 
-			        FILTER(
-			            'fact_sales_info', 
-			            ISBLANK('fact_sales_info'[fullstock])
-			        )
+			        fact_sales_info[has_stock] = 0
 			    )
 			```
 		formatString: #,0
+		displayFolder: Metrics\Storage
 		lineageTag: 97969741-54d2-4472-a638-6ab1652ad40a
 
 	measure 'Gross Profit' = [Revenue] - [Cost of Goods Sold]
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Metrics\Financials
 		lineageTag: 89025473-fe66-4279-aa2c-65ae2642bf5f
 
 	measure 'Gross Profit Margin' = ```
@@ -123,28 +131,256 @@ table Calculus
 			    )
 			```
 		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials
 		lineageTag: 3baa3570-eb52-4069-8059-33f1351f7582
 
 	measure Mark-up = ```
 			
-			    DIVIDE(
-			        [Gross Profit], 
-			        [Cost of Goods Sold]
-			    )
+			
+			DIVIDE([Gross Profit], [Cost of Goods Sold])
+			    
 			```
 		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials
 		lineageTag: 9459e1c2-7d53-4870-86bc-e3e1a7f9be21
 
 	measure 'Average unit cost' = ```
 			
 			    DIVIDE([Cost of Goods Sold], [Units])
 			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Metrics\Storage
 		lineageTag: 37d52e41-963c-4501-914a-faf09579152a
+
+	measure 'Inventory Cost' = [Average unit cost] * [Stock Quantity Hands on Free]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Metrics\Storage
+		lineageTag: 453841d3-9482-4d37-8a2c-13abe8510eab
+
+	measure 'Average ticket' = ```
+			
+			    DIVIDE(
+			        [Revenue], 
+			        [Total Sales]
+			    )
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Metrics\Financials
+		lineageTag: c2f5a628-057d-4e42-96ce-8df200212e3c
+
+	measure 'Variation Year Revenue' = ```
+			
+			var __revenue_LastYear =
+			    CALCULATE([Revenue YoY], DATEADD(dim_calendario[date], -1, YEAR)) 
+			
+			
+			RETURN 
+			    DIVIDE([Revenue YoY] - 
+			    __revenue_LastYear, __revenue_LastYear)
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: Metrics\Financials\Variation
+		lineageTag: a5f952f3-8109-4caf-a462-57ddec3f028f
+
+	measure 'Cost of Gold YoY' =
+			
+			TOTALYTD([Cost of Goods Sold], dim_calendario[date])
+		displayFolder: Metrics\Financials\YoY
+		lineageTag: 6d0eb15f-2b46-4d4a-81e5-60e93ece5c41
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Inventory Cost' = [Average unit cost] * [Stock Quantity Hands on Free]
-		lineageTag: 453841d3-9482-4d37-8a2c-13abe8510eab
+	measure 'Revenue YoY' = ```
+			
+			
+			
+			    TOTALYTD([Revenue], dim_calendario[date])
+			```
+		displayFolder: Metrics\Financials\YoY
+		lineageTag: 0109f90c-6998-4dcb-9778-424fa2a0e47e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Multiples Financials Ranks' = ```
+			
+			
+			var __rankMetrics_ByStores = 
+			    SWITCH( 
+			        MIN(pFinancials_Metrics[pFinancials_Metrics Pedido]),
+			        0, RANKX(ALLSELECTED(dim_stores[store_name]), [Revenue],, DESC, Skip), 
+			        1, RANKX(ALLSELECTED(dim_stores[store_name]), [Cost of Goods Sold],, DESC, Skip), 
+			        2, RANKX(ALLSELECTED(dim_stores[store_name]), [Gross Profit],, DESC, Skip), 
+			        3, RANKX(ALLSELECTED(dim_stores[store_name]), [Total Sales],, DESC, Skip), 
+			        4, RANKX(ALLSELECTED(dim_stores[store_name]), [Average ticket],, DESC, Skip), 
+			        5, RANKX(ALLSELECTED(dim_stores[store_name]), [Gross Profit Margin],, DESC, Skip), 
+			        6, RANKX(ALLSELECTED(dim_stores[store_name]), [Mark-up],, DESC, Skip)
+			    )
+			
+			var __rankMetrics_ByCategory = 
+			    SWITCH(
+			        MIN(pFinancials_Metrics[pFinancials_Metrics Pedido]),
+			        0, RANKX(ALLSELECTED(dim_products[product_category]), [Revenue],, DESC, Skip), 
+			        1, RANKX(ALLSELECTED(dim_products[product_category]), [Cost of Goods Sold],, DESC, Skip), 
+			        2, RANKX(ALLSELECTED(dim_products[product_category]), [Gross Profit],, DESC, Skip), 
+			        3, RANKX(ALLSELECTED(dim_products[product_category]), [Total Sales],, DESC, Skip), 
+			        4, RANKX(ALLSELECTED(dim_products[product_category]), [Average ticket],, DESC, Skip), 
+			        5, RANKX(ALLSELECTED(dim_products[product_category]), [Gross Profit Margin],, DESC, Skip), 
+			        6, RANKX(ALLSELECTED(dim_products[product_category]), [Mark-up],, DESC, Skip)
+			    )
+			
+			var __rankMetrics_ByProducts = 
+			    SWITCH(
+			        MIN(pFinancials_Metrics[pFinancials_Metrics Pedido]),
+			        0, RANKX(ALLSELECTED(dim_products[product_name]), [Revenue],, DESC, Skip), 
+			        1, RANKX(ALLSELECTED(dim_products[product_name]), [Cost of Goods Sold],, DESC, Skip), 
+			        2, RANKX(ALLSELECTED(dim_products[product_name]), [Gross Profit],, DESC, Skip), 
+			        3, RANKX(ALLSELECTED(dim_products[product_name]), [Total Sales],, DESC, Skip), 
+			        4, RANKX(ALLSELECTED(dim_products[product_name]), [Average ticket],, DESC, Skip), 
+			        5, RANKX(ALLSELECTED(dim_products[product_name]), [Gross Profit Margin],, DESC, Skip), 
+			        6, RANKX(ALLSELECTED(dim_products[product_name]), [Mark-up],, DESC, Skip)
+			    )
+			
+			var __rankMetrics_ByLocation = 
+			    SWITCH(
+			        MIN(pFinancials_Metrics[pFinancials_Metrics Pedido]),
+			        0, RANKX(ALLSELECTED(dim_stores[store_location]), [Revenue],, DESC, Skip), 
+			        1, RANKX(ALLSELECTED(dim_stores[store_location]), [Cost of Goods Sold],, DESC, Skip), 
+			        2, RANKX(ALLSELECTED(dim_stores[store_location]), [Gross Profit],, DESC, Skip), 
+			        3, RANKX(ALLSELECTED(dim_stores[store_location]), [Total Sales],, DESC, Skip), 
+			        4, RANKX(ALLSELECTED(dim_stores[store_location]), [Average ticket],, DESC, Skip), 
+			        5, RANKX(ALLSELECTED(dim_stores[store_location]), [Gross Profit Margin],, DESC, Skip), 
+			        6, RANKX(ALLSELECTED(dim_stores[store_location]), [Mark-up],, DESC, Skip)
+			    )
+			
+			RETURN 
+			
+			   SWITCH(
+			        SELECTEDVALUE('pDimensions_Values'[pDimensions_Values Pedido]), 
+			        0, __rankMetrics_ByStores,
+			        1, __rankMetrics_ByCategory,
+			        2, __rankMetrics_ByProducts,
+			        3, __rankMetrics_ByLocation
+			    )
+			```
+		formatString: 0
+		displayFolder: Metrics\Financials
+		lineageTag: c234165a-9968-4b20-9557-e1a0eaccd799
+
+	measure 'Variation Year Cogs' = ```
+			
+			var __cogs_LastYear =CALCULATE([Cost of Gold YoY], DATEADD(dim_calendario[date], -1, YEAR)) 
+			
+			
+			RETURN 
+			    DIVIDE([Cost of Gold YoY] - __cogs_LastYear, __cogs_LastYear)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials\Variation
+		lineageTag: 12eb7c71-cf5c-47c2-a522-74c5f2d5bcd2
+
+	measure 'Revenue YoY 2022' = ```
+			
+			    CALCULATE(
+			        [Revenue YoY], 
+			        dim_calendario[year] = 2022
+			    )
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Revenue
+		lineageTag: 89a217f7-f51e-4a71-899a-66d4c380031e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue YoY 2023' = ```
+			
+			    CALCULATE(
+			        [Revenue YoY], 
+			        dim_calendario[year] = 2023
+			    )
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Revenue
+		lineageTag: dba1db66-bc3e-4f21-9bf9-7245986aa8c6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Goal Acetable' = ```
+			
+			    DIVIDE([Revenue YoY 2023] - [Revenue YoY 2022], [Revenue YoY 2022])
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Revenue
+		lineageTag: 98d47c9b-f691-4d65-9aea-6b9cff4753a6
+
+	measure 'COGS YoY 2022' = ```
+			
+			    CALCULATE(
+			        [Cost of Gold YoY], 
+			        dim_calendario[year] = 2022
+			    )
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Cost of Goods
+		lineageTag: e7fc08ab-649d-4ea3-abf1-c9745d542196
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'COGS YoY 2023' = ```
+			
+			    CALCULATE(
+			        [Cost of Gold YoY], 
+			        dim_calendario[year] = 2023
+			    )
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Cost of Goods
+		lineageTag: bd5bfe22-b3cd-46d0-a229-ee0f6db92897
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'COGS Goal Acetable' = ```
+			
+			    DIVIDE([COGS YoY 2023] - [COGS YoY 2022], [COGS YoY 2022])
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Cost of Goods
+		lineageTag: 09eef01b-7ede-4cfe-917f-9c37099f5af6
+
+	measure 'Gross Profit YoY' = ```
+			
+			     TOTALYTD([Revenue], dim_calendario[date])
+			```
+		displayFolder: Metrics\Financials\YoY
+		lineageTag: 9b9ee06a-295a-4d84-a467-96dbdee4f5ec
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gross Profit YoY 2022' = ```
+			
+			    CALCULATE(
+			        [Gross Profit YoY], 
+			        dim_calendario[year] = 2022
+			    )
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Gross Profit
+		lineageTag: acea972b-0c1b-4fcc-bfd2-2420b3e19473
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gross Profit YoY 2023' = ```
+			
+			    CALCULATE(
+			        [Gross Profit YoY], 
+			        dim_calendario[year] = 2023
+			    )
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Gross Profit
+		lineageTag: 76be8516-4d34-4389-94ca-97b43fdb4ef1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '_Gross Profit Goal Acetable' = ```
+			
+			    DIVIDE([Gross Profit YoY 2023] - [Gross Profit YoY 2022], [Gross Profit YoY 2022])
+			```
+		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Gross Profit
+		lineageTag: 0ad92786-1010-48a8-b8df-401c706ab43d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

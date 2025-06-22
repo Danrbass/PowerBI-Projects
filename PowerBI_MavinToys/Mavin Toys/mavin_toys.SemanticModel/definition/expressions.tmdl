@@ -1,0 +1,8 @@
+/// There is a pathfile on postgress source schema
+expression SchemaName_Postgres = """Toys_Mavin""" meta [IsParameterQuery=true, List={"""Toys_Mavin"""}, DefaultValue="""Toys_Mavin""", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: ffadeb07-d07a-44e8-b461-cc79aaf06b11
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+
