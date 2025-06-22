@@ -10,8 +10,6 @@ table fact_sales_info
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column sale_id
 		dataType: string
 		lineageTag: 1aa43d0e-b3f5-4359-9f86-1cd54d708844
@@ -38,21 +36,13 @@ table fact_sales_info
 
 	column units
 		dataType: int64
-		formatString: 0
 		lineageTag: ce8008f8-01c3-4207-b021-6b1ea58c2a58
 		summarizeBy: sum
 		sourceColumn: units
 
 		annotation SummarizationSetBy = Automatic
 
-	column fullstock
-		dataType: int64
-		formatString: 0
-		lineageTag: 1b96dd56-f173-4f24-abcf-dfd6337f9ac3
-		summarizeBy: sum
-		sourceColumn: fullstock
-
-		annotation SummarizationSetBy = Automatic
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column product_price
 		dataType: double
@@ -74,13 +64,52 @@ table fact_sales_info
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column revenue
+		dataType: double
+		lineageTag: bf1b6b7f-1921-4304-8b1b-d7b0f27e1434
+		summarizeBy: sum
+		sourceColumn: revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cogs
+		dataType: double
+		lineageTag: d9a1311f-cf16-4f05-bbaf-63cf1c077e76
+		summarizeBy: sum
+		sourceColumn: cogs
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column stock_partitioned
+		dataType: double
+		lineageTag: 605ace1c-b668-476a-9413-2aeed78f679d
+		summarizeBy: sum
+		sourceColumn: stock_partitioned
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column has_stock
+		dataType: int64
+		formatString: 0
+		lineageTag: 221da179-2485-47c3-b68c-43db4ffeb455
+		summarizeBy: sum
+		sourceColumn: has_stock
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_sales_info = m
 		mode: import
 		source =
 				let
-				    Fonte = PostgreSQL.Database("localhost", "dbt_sources"),
-				    Toys_Mavin_fact_sales_info = Fonte{[Schema="Toys_Mavin",Item="fact_sales_info"]}[Data],
-				    #"Tipo Alterado" = Table.TransformColumnTypes(Toys_Mavin_fact_sales_info,{{"sale_id", type text}, {"store_id", type text}, {"product_id", type text}})
+				    QUERY = " SELECT * FROM " & SchemaName_Postgres & "." & "fact_sales_info",
+				    Fonte = Value.NativeQuery(PostgreSQL.Database("localhost", "dbt_sources"), QUERY, null, [EnableFolding=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"sale_id", type text}, {"store_id", type text}, {"product_id", type text}})
 				in
 				    #"Tipo Alterado"
 
