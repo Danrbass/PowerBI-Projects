@@ -3178,25 +3178,25 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus": {
+			    "metrics": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus"
+			          "ConceptualEntity": "Metrics"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "calculus": {
+			          "metrics": {
 			            "State": "Generated"
 			          }
 			        }
 			      ]
 			    },
-			    "calculus.total_sales": {
+			    "metrics.total_sales": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Total Sales"
 			        }
 			      },
@@ -3245,10 +3245,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.revenue": {
+			    "metrics.revenue": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Revenue"
 			        }
 			      },
@@ -3291,10 +3291,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.cost_of_goods_sold": {
+			    "metrics.cost_of_goods_sold": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Cost of Goods Sold"
 			        }
 			      },
@@ -3407,10 +3407,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.units": {
+			    "metrics.units": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Units"
 			        }
 			      },
@@ -3423,10 +3423,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.stock_quantity_hands_on_free": {
+			    "metrics.stock_quantity_hands_on_free": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Stock Quantity Hands on Free"
 			        }
 			      },
@@ -3549,10 +3549,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.store_without_stock_on_hand": {
+			    "metrics.store_without_stock_on_hand": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Store without stock on hand"
 			        }
 			      },
@@ -3665,10 +3665,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.gross_profit": {
+			    "metrics.gross_profit": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Gross Profit"
 			        }
 			      },
@@ -3787,10 +3787,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.gross_profit_margin": {
+			    "metrics.gross_profit_margin": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Gross Profit Margin"
 			        }
 			      },
@@ -3915,10 +3915,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.markup": {
+			    "metrics.markup": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Mark-up"
 			        }
 			      },
@@ -4043,10 +4043,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.average_unit_cost": {
+			    "metrics.average_unit_cost": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Average unit cost"
 			        }
 			      },
@@ -4171,10 +4171,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.inventory_cost": {
+			    "metrics.inventory_cost": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Inventory Cost"
 			        }
 			      },
@@ -4293,10 +4293,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.average_ticket": {
+			    "metrics.average_ticket": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Average ticket"
 			        }
 			      },
@@ -4557,10 +4557,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.variation_year_revenue": {
+			    "metrics.variation_year_revenue": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Variation Year Revenue"
 			        }
 			      },
@@ -4679,10 +4679,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.cost_of_gold_YoY": {
+			    "metrics.cost_of_gold_YoY": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Cost of Gold YoY"
 			        }
 			      },
@@ -4795,10 +4795,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.revenue_YoY": {
+			    "metrics.revenue_YoY": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Revenue YoY"
 			        }
 			      },
@@ -4851,10 +4851,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.multiples_financials_ranks": {
+			    "metrics.multiples_financials_ranks": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Multiples Financials Ranks"
 			        }
 			      },
@@ -5372,12 +5372,6 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "metrics": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "financials metrics": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -5409,12 +5403,6 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "metrics": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -5544,10 +5532,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.variation_year_cogs": {
+			    "metrics.variation_year_cogs": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Variation Year Cogs"
 			        }
 			      },
@@ -5672,10 +5660,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.revenue_YoY_2022": {
+			    "metrics.revenue_YoY_2022": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Revenue YoY 2022"
 			        }
 			      },
@@ -5738,10 +5726,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.revenue_YoY_2023": {
+			    "metrics.revenue_YoY_2023": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Revenue YoY 2023"
 			        }
 			      },
@@ -5804,10 +5792,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.revenue_goal_acetable": {
+			    "metrics.revenue_goal_acetable": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "Revenue Goal Acetable"
 			        }
 			      },
@@ -5870,10 +5858,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.COGS_YoY_2022": {
+			    "metrics.COGS_YoY_2022": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "COGS YoY 2022"
 			        }
 			      },
@@ -5896,10 +5884,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.COGS_YoY_2023": {
+			    "metrics.COGS_YoY_2023": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "COGS YoY 2023"
 			        }
 			      },
@@ -5922,10 +5910,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus.COGS_goal_acetable": {
+			    "metrics.COGS_goal_acetable": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Calculus",
+			          "ConceptualEntity": "Metrics",
 			          "ConceptualProperty": "COGS Goal Acetable"
 			        }
 			      },
@@ -5947,174 +5935,273 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "metrics.gross_profit_YoY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metrics",
+			          "ConceptualProperty": "Gross Profit YoY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gross profit YoY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate profit yoy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.657
+			          }
+			        },
+			        {
+			          "overall profit yoy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.657
+			          }
+			        },
+			        {
+			          "whole profit yoy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.657
+			          }
+			        },
+			        {
+			          "sum profit yoy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "total profit yoy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.gross_profit_YoY_2022": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metrics",
+			          "ConceptualProperty": "Gross Profit YoY 2022"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gross profit YoY 2022": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate profit yoy 2022": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "overall profit yoy 2022": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "whole profit yoy 2022": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "sum profit yoy 2022": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "total profit yoy 2022": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.gross_profit_YoY_2023": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metrics",
+			          "ConceptualProperty": "Gross Profit YoY 2023"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "gross profit YoY 2023": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate profit yoy 2023": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "overall profit yoy 2023": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "whole profit yoy 2023": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.665
+			          }
+			        },
+			        {
+			          "sum profit yoy 2023": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "total profit yoy 2023": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "metrics.entity__gross_profit_goal_acetable": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metrics",
+			          "ConceptualProperty": "_Gross Profit Goal Acetable"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_gross profit goal acetable": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_ aggregate profit goal acetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.673
+			          }
+			        },
+			        {
+			          "_ overall profit goal acetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.673
+			          }
+			        },
+			        {
+			          "_ whole profit goal acetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.673
+			          }
+			        },
+			        {
+			          "_ sum profit goal acetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_ total profit goal acetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dim_calendario_date_ano_has_dim_calendario_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.ano": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.ano"
-			          }
-			        },
-			        "dim_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.ano"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.hierarquia_de_data"
-			          }
-			        },
-			        "dim_calendario.date.dia": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.hierarquia_de_data"
-			          }
-			        },
-			        "dim_calendario.date.mê": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.hierarquia_de_data"
-			          }
-			        },
-			        "dim_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
 			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_ano": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_calendario"
@@ -6319,20 +6406,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus_has_COGS_goal_acetable": {
+			    "metrics_has_entity__gross_profit_goal_acetable": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.COGS_goal_acetable": {
+			        "metrics.entity__gross_profit_goal_acetable": {
 			          "Target": {
-			            "Entity": "calculus.COGS_goal_acetable"
+			            "Entity": "metrics.entity__gross_profit_goal_acetable"
 			          }
 			        }
 			      },
@@ -6340,32 +6427,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.COGS_goal_acetable"
+			              "Role": "metrics.entity__gross_profit_goal_acetable"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_COGS_goal_acetable"
+			          "ID": "metrics_have__gross_profit_goal_acetable"
 			        }
 			      ]
 			    },
-			    "calculus_has_COGS_YoY_2023": {
+			    "metrics_has_gross_profit_YoY_2023": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.COGS_YoY_2023": {
+			        "metrics.gross_profit_YoY_2023": {
 			          "Target": {
-			            "Entity": "calculus.COGS_YoY_2023"
+			            "Entity": "metrics.gross_profit_YoY_2023"
 			          }
 			        }
 			      },
@@ -6373,32 +6460,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.COGS_YoY_2023"
+			              "Role": "metrics.gross_profit_YoY_2023"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_COGS_YoY_2023"
+			          "ID": "metrics_have_gross_profit_YoY_2023"
 			        }
 			      ]
 			    },
-			    "calculus_has_COGS_YoY_2022": {
+			    "metrics_has_gross_profit_YoY_2022": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.COGS_YoY_2022": {
+			        "metrics.gross_profit_YoY_2022": {
 			          "Target": {
-			            "Entity": "calculus.COGS_YoY_2022"
+			            "Entity": "metrics.gross_profit_YoY_2022"
 			          }
 			        }
 			      },
@@ -6406,32 +6493,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.COGS_YoY_2022"
+			              "Role": "metrics.gross_profit_YoY_2022"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_COGS_YoY_2022"
+			          "ID": "metrics_have_gross_profit_YoY_2022"
 			        }
 			      ]
 			    },
-			    "calculus_has_revenue_goal_acetable": {
+			    "metrics_has_gross_profit_YoY": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.revenue_goal_acetable": {
+			        "metrics.gross_profit_YoY": {
 			          "Target": {
-			            "Entity": "calculus.revenue_goal_acetable"
+			            "Entity": "metrics.gross_profit_YoY"
 			          }
 			        }
 			      },
@@ -6439,32 +6526,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.revenue_goal_acetable"
+			              "Role": "metrics.gross_profit_YoY"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_revenue_goal_acetable"
+			          "ID": "metrics_have_gross_profit_YoY"
 			        }
 			      ]
 			    },
-			    "calculus_has_revenue_YoY_2023": {
+			    "metrics_has_COGS_goal_acetable": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.revenue_YoY_2023": {
+			        "metrics.COGS_goal_acetable": {
 			          "Target": {
-			            "Entity": "calculus.revenue_YoY_2023"
+			            "Entity": "metrics.COGS_goal_acetable"
 			          }
 			        }
 			      },
@@ -6472,32 +6559,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.revenue_YoY_2023"
+			              "Role": "metrics.COGS_goal_acetable"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_revenue_YoY_2023"
+			          "ID": "metrics_have_COGS_goal_acetable"
 			        }
 			      ]
 			    },
-			    "calculus_has_revenue_YoY_2022": {
+			    "metrics_has_COGS_YoY_2023": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.revenue_YoY_2022": {
+			        "metrics.COGS_YoY_2023": {
 			          "Target": {
-			            "Entity": "calculus.revenue_YoY_2022"
+			            "Entity": "metrics.COGS_YoY_2023"
 			          }
 			        }
 			      },
@@ -6505,32 +6592,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.revenue_YoY_2022"
+			              "Role": "metrics.COGS_YoY_2023"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_revenue_YoY_2022"
+			          "ID": "metrics_have_COGS_YoY_2023"
 			        }
 			      ]
 			    },
-			    "calculus_has_variation_year_cogs": {
+			    "metrics_has_COGS_YoY_2022": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.variation_year_cogs": {
+			        "metrics.COGS_YoY_2022": {
 			          "Target": {
-			            "Entity": "calculus.variation_year_cogs"
+			            "Entity": "metrics.COGS_YoY_2022"
 			          }
 			        }
 			      },
@@ -6538,15 +6625,147 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.variation_year_cogs"
+			              "Role": "metrics.COGS_YoY_2022"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_variation_year_cogs"
+			          "ID": "metrics_have_COGS_YoY_2022"
+			        }
+			      ]
+			    },
+			    "metrics_has_revenue_goal_acetable": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.revenue_goal_acetable": {
+			          "Target": {
+			            "Entity": "metrics.revenue_goal_acetable"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.revenue_goal_acetable"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_revenue_goal_acetable"
+			        }
+			      ]
+			    },
+			    "metrics_has_revenue_YoY_2023": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.revenue_YoY_2023": {
+			          "Target": {
+			            "Entity": "metrics.revenue_YoY_2023"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.revenue_YoY_2023"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_revenue_YoY_2023"
+			        }
+			      ]
+			    },
+			    "metrics_has_revenue_YoY_2022": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.revenue_YoY_2022": {
+			          "Target": {
+			            "Entity": "metrics.revenue_YoY_2022"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.revenue_YoY_2022"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_revenue_YoY_2022"
+			        }
+			      ]
+			    },
+			    "metrics_has_variation_year_cogs": {
+			      "Binding": {
+			        "ConceptualEntity": "Metrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "metrics": {
+			          "Target": {
+			            "Entity": "metrics"
+			          }
+			        },
+			        "metrics.variation_year_cogs": {
+			          "Target": {
+			            "Entity": "metrics.variation_year_cogs"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "metrics"
+			            },
+			            "Object": {
+			              "Role": "metrics.variation_year_cogs"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "metrics_have_variation_year_cogs"
 			        }
 			      ]
 			    },
@@ -6708,20 +6927,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "calculus_has_multiples_financials_ranks": {
+			    "metrics_has_multiples_financials_ranks": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.multiples_financials_ranks": {
+			        "metrics.multiples_financials_ranks": {
 			          "Target": {
-			            "Entity": "calculus.multiples_financials_ranks"
+			            "Entity": "metrics.multiples_financials_ranks"
 			          }
 			        }
 			      },
@@ -6729,32 +6948,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.multiples_financials_ranks"
+			              "Role": "metrics.multiples_financials_ranks"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_multiples_financials_ranks"
+			          "ID": "metrics_have_multiples_financials_ranks"
 			        }
 			      ]
 			    },
-			    "calculus_has_revenue_YoY": {
+			    "metrics_has_revenue_YoY": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.revenue_YoY": {
+			        "metrics.revenue_YoY": {
 			          "Target": {
-			            "Entity": "calculus.revenue_YoY"
+			            "Entity": "metrics.revenue_YoY"
 			          }
 			        }
 			      },
@@ -6762,32 +6981,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.revenue_YoY"
+			              "Role": "metrics.revenue_YoY"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_revenue_YoY"
+			          "ID": "metrics_have_revenue_YoY"
 			        }
 			      ]
 			    },
-			    "calculus_has_cost_of_gold_YoY": {
+			    "metrics_has_cost_of_gold_YoY": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.cost_of_gold_YoY": {
+			        "metrics.cost_of_gold_YoY": {
 			          "Target": {
-			            "Entity": "calculus.cost_of_gold_YoY"
+			            "Entity": "metrics.cost_of_gold_YoY"
 			          }
 			        }
 			      },
@@ -6795,32 +7014,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.cost_of_gold_YoY"
+			              "Role": "metrics.cost_of_gold_YoY"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_cost_of_gold_YoY"
+			          "ID": "metrics_have_cost_of_gold_YoY"
 			        }
 			      ]
 			    },
-			    "calculus_has_variation_year_revenue": {
+			    "metrics_has_variation_year_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "Calculus"
+			        "ConceptualEntity": "Metrics"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "calculus": {
+			        "metrics": {
 			          "Target": {
-			            "Entity": "calculus"
+			            "Entity": "metrics"
 			          }
 			        },
-			        "calculus.variation_year_revenue": {
+			        "metrics.variation_year_revenue": {
 			          "Target": {
-			            "Entity": "calculus.variation_year_revenue"
+			            "Entity": "metrics.variation_year_revenue"
 			          }
 			        }
 			      },
@@ -6828,15 +7047,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "calculus"
+			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "calculus.variation_year_revenue"
+			              "Role": "metrics.variation_year_revenue"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calculi_have_variation_year_revenue"
+			          "ID": "metrics_have_variation_year_revenue"
 			        }
 			      ]
 			    },
@@ -6906,7 +7125,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_average_ticket": {
+			    "fact_sales_info_has_metrics_average_ticket": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -6917,9 +7136,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.average_ticket": {
+			        "metrics.average_ticket": {
 			          "Target": {
-			            "Entity": "calculus.average_ticket"
+			            "Entity": "metrics.average_ticket"
 			          }
 			        }
 			      },
@@ -6930,7 +7149,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.average_ticket"
+			              "Role": "metrics.average_ticket"
 			            }
 			          },
 			          "State": "Generated",
@@ -6939,7 +7158,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_inventory_cost": {
+			    "fact_sales_info_has_metrics_inventory_cost": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -6950,9 +7169,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.inventory_cost": {
+			        "metrics.inventory_cost": {
 			          "Target": {
-			            "Entity": "calculus.inventory_cost"
+			            "Entity": "metrics.inventory_cost"
 			          }
 			        }
 			      },
@@ -6963,7 +7182,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.inventory_cost"
+			              "Role": "metrics.inventory_cost"
 			            }
 			          },
 			          "State": "Generated",
@@ -6990,7 +7209,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "calculus.inventory_cost"
+			              "Role": "metrics.inventory_cost"
 			            }
 			          },
 			          "State": "Generated",
@@ -6999,7 +7218,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_average_unit_cost": {
+			    "fact_sales_info_has_metrics_average_unit_cost": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7010,9 +7229,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.average_unit_cost": {
+			        "metrics.average_unit_cost": {
 			          "Target": {
-			            "Entity": "calculus.average_unit_cost"
+			            "Entity": "metrics.average_unit_cost"
 			          }
 			        }
 			      },
@@ -7023,7 +7242,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.average_unit_cost"
+			              "Role": "metrics.average_unit_cost"
 			            }
 			          },
 			          "State": "Generated",
@@ -7050,7 +7269,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "calculus.average_unit_cost"
+			              "Role": "metrics.average_unit_cost"
 			            }
 			          },
 			          "State": "Generated",
@@ -7059,7 +7278,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_markup": {
+			    "fact_sales_info_has_metrics_markup": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7070,9 +7289,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.markup": {
+			        "metrics.markup": {
 			          "Target": {
-			            "Entity": "calculus.markup"
+			            "Entity": "metrics.markup"
 			          }
 			        }
 			      },
@@ -7083,7 +7302,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.markup"
+			              "Role": "metrics.markup"
 			            }
 			          },
 			          "State": "Generated",
@@ -7092,7 +7311,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_gross_profit_margin": {
+			    "fact_sales_info_has_metrics_gross_profit_margin": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7103,9 +7322,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.gross_profit_margin": {
+			        "metrics.gross_profit_margin": {
 			          "Target": {
-			            "Entity": "calculus.gross_profit_margin"
+			            "Entity": "metrics.gross_profit_margin"
 			          }
 			        }
 			      },
@@ -7116,7 +7335,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.gross_profit_margin"
+			              "Role": "metrics.gross_profit_margin"
 			            }
 			          },
 			          "State": "Generated",
@@ -7125,7 +7344,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_gross_profit": {
+			    "fact_sales_info_has_metrics_gross_profit": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7136,9 +7355,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.gross_profit": {
+			        "metrics.gross_profit": {
 			          "Target": {
-			            "Entity": "calculus.gross_profit"
+			            "Entity": "metrics.gross_profit"
 			          }
 			        }
 			      },
@@ -7149,7 +7368,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.gross_profit"
+			              "Role": "metrics.gross_profit"
 			            }
 			          },
 			          "State": "Generated",
@@ -7158,7 +7377,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_store_without_stock_on_hand": {
+			    "fact_sales_info_has_metrics_store_without_stock_on_hand": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7169,9 +7388,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.store_without_stock_on_hand": {
+			        "metrics.store_without_stock_on_hand": {
 			          "Target": {
-			            "Entity": "calculus.store_without_stock_on_hand"
+			            "Entity": "metrics.store_without_stock_on_hand"
 			          }
 			        }
 			      },
@@ -7182,7 +7401,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.store_without_stock_on_hand"
+			              "Role": "metrics.store_without_stock_on_hand"
 			            }
 			          },
 			          "State": "Generated",
@@ -7191,7 +7410,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_stock_quantity_hands_on_free": {
+			    "fact_sales_info_has_metrics_stock_quantity_hands_on_free": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7202,9 +7421,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.stock_quantity_hands_on_free": {
+			        "metrics.stock_quantity_hands_on_free": {
 			          "Target": {
-			            "Entity": "calculus.stock_quantity_hands_on_free"
+			            "Entity": "metrics.stock_quantity_hands_on_free"
 			          }
 			        }
 			      },
@@ -7215,7 +7434,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.stock_quantity_hands_on_free"
+			              "Role": "metrics.stock_quantity_hands_on_free"
 			            }
 			          },
 			          "State": "Generated",
@@ -7224,7 +7443,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_units": {
+			    "fact_sales_info_has_metrics_units": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7235,9 +7454,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.units": {
+			        "metrics.units": {
 			          "Target": {
-			            "Entity": "calculus.units"
+			            "Entity": "metrics.units"
 			          }
 			        }
 			      },
@@ -7248,7 +7467,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.units"
+			              "Role": "metrics.units"
 			            }
 			          },
 			          "State": "Generated",
@@ -7257,7 +7476,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_cost_of_goods_sold": {
+			    "fact_sales_info_has_metrics_cost_of_goods_sold": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7268,9 +7487,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.cost_of_goods_sold": {
+			        "metrics.cost_of_goods_sold": {
 			          "Target": {
-			            "Entity": "calculus.cost_of_goods_sold"
+			            "Entity": "metrics.cost_of_goods_sold"
 			          }
 			        }
 			      },
@@ -7281,7 +7500,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.cost_of_goods_sold"
+			              "Role": "metrics.cost_of_goods_sold"
 			            }
 			          },
 			          "State": "Generated",
@@ -7290,7 +7509,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_revenue": {
+			    "fact_sales_info_has_metrics_revenue": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7301,9 +7520,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.revenue": {
+			        "metrics.revenue": {
 			          "Target": {
-			            "Entity": "calculus.revenue"
+			            "Entity": "metrics.revenue"
 			          }
 			        }
 			      },
@@ -7314,7 +7533,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.revenue"
+			              "Role": "metrics.revenue"
 			            }
 			          },
 			          "State": "Generated",
@@ -7323,7 +7542,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_sales_info_has_calculus_total_sales": {
+			    "fact_sales_info_has_metrics_total_sales": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales_info"
 			      },
@@ -7334,9 +7553,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_sales_info"
 			          }
 			        },
-			        "calculus.total_sales": {
+			        "metrics.total_sales": {
 			          "Target": {
-			            "Entity": "calculus.total_sales"
+			            "Entity": "metrics.total_sales"
 			          }
 			        }
 			      },
@@ -7347,7 +7566,7 @@ cultureInfo pt-BR
 			              "Role": "fact_sales_info"
 			            },
 			            "Object": {
-			              "Role": "calculus.total_sales"
+			              "Role": "metrics.total_sales"
 			            }
 			          },
 			          "State": "Generated",
@@ -8378,6 +8597,171 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "dim_stores_are_opened_on_data_opened"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.hierarquia_de_data"
+			          }
+			        },
+			        "dim_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.hierarquia_de_data"
+			          }
+			        },
+			        "dim_calendario.date.mê": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.hierarquia_de_data"
+			          }
+			        },
+			        "dim_calendario.date.dia": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_ano_has_dim_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.ano"
+			          }
+			        },
+			        "dim_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.ano"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
 			        }
 			      ]
 			    },

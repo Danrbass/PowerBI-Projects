@@ -1,4 +1,4 @@
-table Calculus
+table Metrics
 	lineageTag: 180c4651-a137-4b6d-8858-baad87ff6ff3
 
 	measure 'Total Sales' = ```
@@ -384,7 +384,7 @@ table Calculus
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	partition Calculus = m
+	partition Metrics = m
 		mode: import
 		source =
 				let
@@ -393,6 +393,8 @@ table Calculus
 				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
 				in
 				    #"Colunas Removidas"
+
+	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

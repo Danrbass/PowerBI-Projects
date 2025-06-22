@@ -40,13 +40,13 @@ table pFinancials_Metrics
 		mode: import
 		source =
 				{
-				    ("Revenue", NAMEOF('Calculus'[Revenue]), 0),
-				    ("Cost of Goods Sold", NAMEOF('Calculus'[Cost of Goods Sold]), 1),
-				    ("Gross Profit", NAMEOF('Calculus'[Gross Profit]), 2),
-				    ("Total Sales", NAMEOF('Calculus'[Total Sales]), 3),
-				    ("Average ticket", NAMEOF('Calculus'[Average ticket]), 4),
-				    ("Gross Profit Margin", NAMEOF('Calculus'[Gross Profit Margin]), 5),
-				    ("Mark-up", NAMEOF('Calculus'[Mark-up]), 6)
+				    ("Revenue", NAMEOF('Metrics'[Revenue]), 0),
+				    ("Cost of Goods Sold", NAMEOF('Metrics'[Cost of Goods Sold]), 1),
+				    ("Gross Profit", NAMEOF('Metrics'[Gross Profit]), 2),
+				    ("Total Sales", NAMEOF('Metrics'[Total Sales]), 3),
+				    ("Average ticket", NAMEOF('Metrics'[Average ticket]), 4),
+				    ("Gross Profit Margin", NAMEOF('Metrics'[Gross Profit Margin]), 5),
+				    ("Mark-up", NAMEOF('Metrics'[Mark-up]), 6)
 				}
 
 	annotation PBI_Id = a40ea77bf617477a8ec85f3667474140

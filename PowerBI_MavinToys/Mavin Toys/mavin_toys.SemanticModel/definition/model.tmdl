@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["dim_products","dim_calendario","dim_stores","fact_sales_info","Calculus","SchemaName_Postgres"]
+annotation PBI_QueryOrder = ["dim_products","dim_calendario","dim_stores","fact_sales_info","Metrics","SchemaName_Postgres"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -21,7 +21,7 @@ ref table LocalDateTable_29e5bc10-87a9-4d5a-9b90-92c76b7d860c
 ref table dim_stores
 ref table LocalDateTable_b2e548d5-927e-495c-8283-3f6e1ace2fa2
 ref table fact_sales_info
-ref table Calculus
+ref table Metrics
 ref table pDimensions_Values
 ref table pFinancials_Metrics
 
