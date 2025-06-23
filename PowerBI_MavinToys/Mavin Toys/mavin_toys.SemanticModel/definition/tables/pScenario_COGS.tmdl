@@ -1,0 +1,27 @@
+table pScenario_COGS
+	lineageTag: ae3dbb54-a1d4-4c26-9072-98b31a1f14b7
+
+	measure 'Valor pScenario_COGS' = SELECTEDVALUE('pScenario_COGS'[pScenario_COGS])
+		lineageTag: 9d32016d-d729-4757-90ac-fec79f9cd132
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pScenario_COGS
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 7b5779aa-4114-4fd4-a647-4f560bca68d2
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition pScenario_COGS = calculated
+		mode: import
+		source = GENERATESERIES(-1, 1, 0.025)
+
+	annotation PBI_Id = 3f459be39be341f0a37487e7f7ef9f76
+

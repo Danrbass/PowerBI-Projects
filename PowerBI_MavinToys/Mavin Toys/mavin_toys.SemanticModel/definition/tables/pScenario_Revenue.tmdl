@@ -1,0 +1,26 @@
+table pScenario_Revenue
+	lineageTag: b3ea6c06-2976-4e0d-b765-fb5ad4111093
+
+	measure 'Valor pScenario_Revenue' = SELECTEDVALUE('pScenario_Revenue'[pScenario_Revenue])
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 2f0f9116-f266-44a0-93ff-86990b472e87
+
+	column pScenario_Revenue
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: a2a3768b-9507-4c33-a04b-a847df2dba4d
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition pScenario_Revenue = calculated
+		mode: import
+		source = GENERATESERIES(-1, 1, 0.025)
+
+	annotation PBI_Id = 3999e98c7c99493c8162ad6341e9bcf5
+

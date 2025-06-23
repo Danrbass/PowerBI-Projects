@@ -179,13 +179,13 @@ table Metrics
 			    __revenue_LastYear, __revenue_LastYear)
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: Metrics\Financials\Variation
+		displayFolder: Metrics\Financials\.Variation
 		lineageTag: a5f952f3-8109-4caf-a462-57ddec3f028f
 
 	measure 'Cost of Gold YoY' =
 			
 			TOTALYTD([Cost of Goods Sold], dim_calendario[date])
-		displayFolder: Metrics\Financials\YoY
+		displayFolder: Metrics\Financials\.YoY
 		lineageTag: 6d0eb15f-2b46-4d4a-81e5-60e93ece5c41
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -196,7 +196,7 @@ table Metrics
 			
 			    TOTALYTD([Revenue], dim_calendario[date])
 			```
-		displayFolder: Metrics\Financials\YoY
+		displayFolder: Metrics\Financials\.YoY
 		lineageTag: 0109f90c-6998-4dcb-9778-424fa2a0e47e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -275,7 +275,7 @@ table Metrics
 			    DIVIDE([Cost of Gold YoY] - __cogs_LastYear, __cogs_LastYear)
 			```
 		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: Metrics\Financials\Variation
+		displayFolder: Metrics\Financials\.Variation
 		lineageTag: 12eb7c71-cf5c-47c2-a522-74c5f2d5bcd2
 
 	measure 'Revenue YoY 2022' = ```
@@ -346,7 +346,7 @@ table Metrics
 			
 			     TOTALYTD([Revenue], dim_calendario[date])
 			```
-		displayFolder: Metrics\Financials\YoY
+		displayFolder: Metrics\Financials\.YoY
 		lineageTag: 9b9ee06a-295a-4d84-a467-96dbdee4f5ec
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -375,14 +375,122 @@ table Metrics
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '_Gross Profit Goal Acetable' = ```
+	measure 'Gross Profit Goal Acetable' = ```
 			
 			    DIVIDE([Gross Profit YoY 2023] - [Gross Profit YoY 2022], [Gross Profit YoY 2022])
 			```
+		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Metrics\Financials\.Comparison 2022X 2023\Gross Profit
 		lineageTag: 0ad92786-1010-48a8-b8df-401c706ab43d
 
+	measure 'Scenario Revenue' = ```
+			
+			
+			    [Revenue] * (1 + pScenario_Revenue[Valor pScenario_Revenue])
+			```
+		displayFolder: Metrics\Financials\.Scenario
+		lineageTag: 7ea19db1-6e9f-428f-9256-424c7dc7e1bc
+
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Scenario Mark-up' = ```
+			
+			    DIVIDE(
+			        [Scenario Gross Profit], 
+			        [Scenario COGS]
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials\.Scenario
+		lineageTag: d4032c35-e0f0-4df3-a22a-b70a82ee314c
+
+	measure 'Scenario Gross Profit Margin' = ```
+			
+			    DIVIDE(
+			        [Scenario Gross Profit], 
+			        [Scenario Revenue]
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Metrics\Financials\.Scenario
+		lineageTag: 53bfc241-d154-4c2f-819b-40061fe98bfa
+
+	measure 'Scenario Gross Profit' = ```
+			
+			    [Scenario Revenue] - [Scenario COGS]
+			```
+		displayFolder: Metrics\Financials\.Scenario
+		lineageTag: df6d9c08-efc4-48a8-95a1-b34f48397f76
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Scenario COGS' = ```
+			
+			
+			    [Cost of Goods Sold] * (1 + pScenario_COGS[Valor pScenario_COGS])
+			```
+		displayFolder: Metrics\Financials\.Scenario
+		lineageTag: b4d3efd5-9443-4404-81d8-0e22cd6f5a72
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure _
+		lineageTag: b1be1293-1fa6-4bbe-bf1a-98650ff38292
+
+	measure __
+		lineageTag: 4d06475a-d000-47a3-b439-d2069df2d948
+
+	measure ___
+		lineageTag: 71286164-62fb-438a-8119-a26ba851ddca
+
+	measure '_ABC Classified Product' = ```
+			
+			    SWITCH(
+			        TRUE(), 
+			        [_ABC Revenue] <= 0.55, "Product A", 
+			        [_ABC Revenue] <= 0.91, "Product B", 
+			        "Product C"
+			    )
+			```
+		lineageTag: 61e6d1e8-0b86-4eb1-9480-5ef90babdb7f
+
+	measure '_ABC Revenue' = ```
+			
+			
+			var __rankX_RevenueProducts = 
+			    RANKX ( 
+			        ALLSELECTED ( dim_products ), 
+			        [Revenue],
+			        , 
+			        DESC, 
+			        DENSE 
+			    )
+			
+			
+			var __sumX_ValuesProducts = 
+			    SUMX ( 
+			        ALLSELECTED ( dim_products ), 
+			        [Revenue] 
+			    )
+			
+			
+			RETURN 
+			
+			DIVIDE (
+			    CALCULATE (
+			        [Revenue],
+			        TOPN (
+			            __rankX_RevenueProducts,
+			            ALLSELECTED ( dim_products ),
+			            [Revenue], 
+			            DESC
+			        )
+			    ),
+			    __sumX_ValuesProducts
+			)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 31ee3a1f-2016-47ef-896e-0c689c400e3c
 
 	partition Metrics = m
 		mode: import

@@ -24,6 +24,9 @@ ref table fact_sales_info
 ref table Metrics
 ref table pDimensions_Values
 ref table pFinancials_Metrics
+ref table pScenario_Revenue
+ref table pScenario_COGS
+ref table pStorage_Matrics
 
 ref cultureInfo pt-BR
 

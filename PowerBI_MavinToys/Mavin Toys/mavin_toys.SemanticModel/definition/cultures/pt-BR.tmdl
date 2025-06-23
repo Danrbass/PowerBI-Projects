@@ -6065,6 +6065,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "Gross Profit YTD 2022": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6131,77 +6141,262 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.599
 			          }
+			        },
+			        {
+			          "Gross Profit YTD 2023": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
-			    "metrics.entity__gross_profit_goal_acetable": {
+			    "metrics.gross_profit_goal_acetable": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Metrics",
-			          "ConceptualProperty": "_Gross Profit Goal Acetable"
+			          "ConceptualProperty": "Gross Profit Goal Acetable"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_gross profit goal acetable": {
+			          "gross profit goal acetable": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "_ aggregate profit goal acetable": {
+			          "aggregate profit goal acetable": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.673
+			            "Weight": 0.665
 			          }
 			        },
 			        {
-			          "_ overall profit goal acetable": {
+			          "overall profit goal acetable": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.673
+			            "Weight": 0.665
 			          }
 			        },
 			        {
-			          "_ whole profit goal acetable": {
+			          "whole profit goal acetable": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.673
+			            "Weight": 0.665
 			          }
 			        },
 			        {
-			          "_ sum profit goal acetable": {
+			          "sum profit goal acetable": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.605
+			            "Weight": 0.599
 			          }
 			        },
 			        {
-			          "_ total profit goal acetable": {
+			          "total profit goal acetable": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.605
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "% Gross Profit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dim_calendario_date_ano_has_dim_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.ano"
+			          }
+			        },
+			        "dim_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.ano"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dim_calendario.date.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.hierarquia_de_data"
+			          }
+			        },
+			        "dim_calendario.date.dia": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.hierarquia_de_data"
+			          }
+			        },
+			        "dim_calendario.date.mê": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario.date.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.hierarquia_de_data"
+			          }
+			        },
+			        "dim_calendario.date.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario.date.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
 			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_ano": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_calendario"
@@ -6406,7 +6601,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "metrics_has_entity__gross_profit_goal_acetable": {
+			    "metrics_has_gross_profit_goal_acetable": {
 			      "Binding": {
 			        "ConceptualEntity": "Metrics"
 			      },
@@ -6417,9 +6612,9 @@ cultureInfo pt-BR
 			            "Entity": "metrics"
 			          }
 			        },
-			        "metrics.entity__gross_profit_goal_acetable": {
+			        "metrics.gross_profit_goal_acetable": {
 			          "Target": {
-			            "Entity": "metrics.entity__gross_profit_goal_acetable"
+			            "Entity": "metrics.gross_profit_goal_acetable"
 			          }
 			        }
 			      },
@@ -6430,12 +6625,12 @@ cultureInfo pt-BR
 			              "Role": "metrics"
 			            },
 			            "Object": {
-			              "Role": "metrics.entity__gross_profit_goal_acetable"
+			              "Role": "metrics.gross_profit_goal_acetable"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "metrics_have__gross_profit_goal_acetable"
+			          "ID": "metrics_have_gross_profit_goal_acetable"
 			        }
 			      ]
 			    },
@@ -8597,171 +8792,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "dim_stores_are_opened_on_data_opened"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.hierarquia_de_data"
-			          }
-			        },
-			        "dim_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.hierarquia_de_data"
-			          }
-			        },
-			        "dim_calendario.date.mê": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_hierarquia_de_data_has_dim_calendario_date_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.hierarquia_de_data"
-			          }
-			        },
-			        "dim_calendario.date.dia": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "dim_calendario_date_ano_has_dim_calendario_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario.date.ano": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.ano"
-			          }
-			        },
-			        "dim_calendario.date.trimestre": {
-			          "Target": {
-			            "Entity": "dim_calendario.date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.ano"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dim_calendario.date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dim_calendario.date.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos"
 			        }
 			      ]
 			    },
