@@ -1,0 +1,48 @@
+table pStorage_Matrics
+	lineageTag: cca37cf3-8d0a-483a-a069-ec586cdf30c7
+
+	column pStorage_Matrics
+		lineageTag: 7d7e4a94-0710-4d72-8f6f-c442d28deec2
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'pStorage_Matrics Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'pStorage_Matrics Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pStorage_Matrics Campos'
+		isHidden
+		lineageTag: 79ce334f-66dd-46c7-9edd-61c66deb40eb
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'pStorage_Matrics Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pStorage_Matrics Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: b7092687-30cb-4df6-a746-77778b708647
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pStorage_Matrics = calculated
+		mode: import
+		source =
+				{
+				    ("Store free hand", NAMEOF('Metrics'[Stock Quantity Hands on Free]), 0),
+				    ("Store without storage", NAMEOF('Metrics'[Store without stock on hand]), 1)
+				}
+
+	annotation PBI_Id = 9b093c00ee7746a6adc232b3aa5f8007
+

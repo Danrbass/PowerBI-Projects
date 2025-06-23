@@ -93,6 +93,45 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1754.3830500146937,
+            "y": 286.9223489799233
+          },
+          "nodeIndex": "pScenario_Revenue",
+          "nodeLineageTag": "b3ea6c06-2976-4e0d-b765-fb5ad4111093",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2038.3830500146937,
+            "y": 286.9223489799233
+          },
+          "nodeIndex": "pScenario_COGS",
+          "nodeLineageTag": "ae3dbb54-a1d4-4c26-9072-98b31a1f14b7",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2322.3830500146937,
+            "y": 322.9223489799233
+          },
+          "nodeIndex": "pStorage_Matrics",
+          "nodeLineageTag": "cca37cf3-8d0a-483a-a069-ec586cdf30c7",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",
