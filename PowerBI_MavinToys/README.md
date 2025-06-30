@@ -82,3 +82,6 @@ I downloaded the data sources and saved them in a Postgres database schema named
       <ul padding: 16px margin: 12px></ul>
       
     </div>
+
+- 5° Conclusions:
+    Considering the recomendation analysis from Maven Analytics. The conclusions are:
