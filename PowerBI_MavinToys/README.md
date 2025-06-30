@@ -43,7 +43,7 @@ I downloaded the data sources and saved them in a Postgres database schema named
 
 - 4° DAX Formulas:
   Following the dax formulas are used belong the projects:
-    <div display : flex align = center justify-content = space-between flex-wrap : wrap> 
+    <div display : flex align = flex-start justify-content = flex-start flex-wrap : wrap> 
       <ul padding: 2.0rem margin: 1.5rem>Total Sales = DISTINCTCOUNT('fact_sales_info'[sale_id])</ul>
       <ul padding: 2.0rem margin: 1.5rem>Revenue = SUM(fact_sales_info[Revenue])</ul>
       <ul padding: 2.0rem margin: 1.5rem></ul>
