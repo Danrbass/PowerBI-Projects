@@ -28,6 +28,7 @@ I downloaded the data sources and saved them in a Postgres database schema named
                 
   - 3.2°  Financials :
           ![image](https://github.com/user-attachments/assets/d659682f-78b3-4640-aa75-c60e8c959a6b)
+    
 
   - 3.3°  Storage :
           ![image](https://github.com/user-attachments/assets/d8836cdd-f965-4d49-89ed-8ed47c4b3509)
