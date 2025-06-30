@@ -43,12 +43,26 @@ I downloaded the data sources and saved them in a Postgres database schema named
 
 - 4° DAX Formulas:
   Following the dax formulas are used belong the projects:
-    <div display : flex align = flex-start justify-content = flex-start flex-wrap : wrap padding: 2.0rem margin: 1.5rem> 
-      <ul>Total Sales = DISTINCTCOUNT('fact_sales_info'[sale_id])</ul>
-      <ul >Revenue = SUM(fact_sales_info[Revenue])</ul>
-      <ul ></ul>
-      <ul ></ul>
-      <ul ></ul>
-      <ul ></ul>
-      <ul ></ul>
+    <div display : flex align = flex-start justify-content = flex-start flex-wrap : wrap > 
+      <ul padding: 16px margin: 12px> 
+        Total Sales = DISTINCTCOUNT('fact_sales_info'[sale_id])
+      </ul>
+      <ul padding: 16px margin: 12px> 
+        Revenue = SUM(fact_sales_info[Revenue])
+      </ul>
+      <ul padding: 16px margin: 12px> 
+        Mark-up = DIVIDE([Gross Profit], [Cost of Goods Sold])
+      </ul>
+      <ul padding: 16px margin: 12px> 
+        Gross Profit Margin = DIVIDE([Gross Profit], [Revenue])
+      </ul>
+      <ul padding: 16px margin: 12px> 
+        Gross Profit = [Revenue] - [Cost of Goods Sold]
+      </ul>
+      <ul padding: 16px margin: 12px>
+        Cost of Goods Sold = SUM(fact_sales_info[Cogs])
+      </ul>
+      <ul padding: 16px margin: 12px>
+        Average ticket = DIVIDE([Revenue], [Total Sales])
+      </ul>
     </div>
