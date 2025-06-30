@@ -65,4 +65,20 @@ I downloaded the data sources and saved them in a Postgres database schema named
       <ul padding: 16px margin: 12px>
         Average ticket = DIVIDE([Revenue], [Total Sales])
       </ul>
+      <ul padding: 16px margin: 12px>
+        Average unit cost = DIVIDE([Cost of Goods Sold], [Units])</ul>
+      <ul padding: 16px margin: 12px>
+        Inventory Cost = [Average unit cost] * [Stock Quantity Hands on Free]
+      </ul>
+      <ul padding: 16px margin: 12px>
+        Stock Quantity Hands on Free = sum(fact_sales_info[stock_partitioned])
+      </ul>
+      <ul padding: 16px margin: 12px>
+        Store without stock on hand = CALCULATE([Total Sales], fact_sales_info[has_stock] = 0)
+      </ul>
+      <ul padding: 16px margin: 12px>
+        Units = SUM(fact_sales_info[units])
+      </ul>
+      <ul padding: 16px margin: 12px></ul>
+      
     </div>
