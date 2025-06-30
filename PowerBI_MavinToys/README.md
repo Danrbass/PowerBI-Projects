@@ -45,7 +45,7 @@ I downloaded the data sources and saved them in a Postgres database schema named
   Following the dax formulas are used belong the projects:
     <div display : flex > 
       <ul>Total Sales = DISTINCTCOUNT('fact_sales_info'[sale_id])</ul>
-      <ul></ul>
+      <ul>Revenue = SUM(fact_sales_info[Revenue])</ul>
       <ul></ul>
       <ul></ul>
       <ul></ul>
