@@ -12,10 +12,10 @@ I downloaded the data sources and saved them in a Postgres database schema named
 
 - 2° Recommendation analyses :
   The Maven Analytics suggests some question are been solved:
-  -- 2.1° Which product categories drive the biggest profits? Is this the same across store locations?
-  -- 2.2° Can you find any seasonal trends or patterns in the sales data?
-  -- 2.3° Are sales being lost with out-of-stock products at certain locations?
-  -- 2.4° How much money is tied up in inventory at the toy stores? How long will it last?
+  - 2.1° Which product categories drive the biggest profits? Is this the same across store locations?
+  - 2.2° Can you find any seasonal trends or patterns in the sales data?
+  - 2.3° Are sales being lost with out-of-stock products at certain locations?
+  - 2.4° How much money is tied up in inventory at the toy stores? How long will it last?
 
 - 3° BI Template:
   The project are divide in four visions:
