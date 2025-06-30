@@ -8,7 +8,7 @@ I downloaded the data sources and saved them in a Postgres database schema named
   The first step I took was creating the environment for dbt, adding it to GitHub, and installing the libraries dbt-core, dbt-postgres, and other dependencies required to run it. After that, using the dbt init command, I created the Data Warehouse where all the transformations have been performed. I separated the project into two paths: Staging and Marts. In Staging, you will find the raw data sources, and in Marts, the data has already been transformed.
 
 
- ![image](https://github.com/user-attachments/assets/4831f2c9-9fe3-443f-b527-69c324d6e3ea)
+     ![image](https://github.com/user-attachments/assets/4831f2c9-9fe3-443f-b527-69c324d6e3ea)
 
 - 2° Recommendation analyses :
   The Maven Analytics suggests some question are been solved:
@@ -38,7 +38,17 @@ I downloaded the data sources and saved them in a Postgres database schema named
 
 
   - Menu :
-  
+          ![image](https://github.com/user-attachments/assets/71660447-dc55-4760-8ce8-8b7cb6d8dbdf)
+
 
 - 4° DAX Formulas:
-  Following the dax formulas are used belong the projects
+  Following the dax formulas are used belong the projects:
+    <div display : flex > 
+      <ul>Total Sales = DISTINCTCOUNT('fact_sales_info'[sale_id])</ul>
+      <ul></ul>
+      <ul></ul>
+      <ul></ul>
+      <ul></ul>
+      <ul></ul>
+      <ul></ul>
+    </div>
